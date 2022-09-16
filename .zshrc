@@ -85,11 +85,12 @@ if [ -f ~/.zsh_local ]; then
   source ~/.zsh_local
 fi
 
-# always in a Tmux session
-tmux has -t hack &> /dev/null
-if [ $? != 0 ]; then
-  tmux new -s hack
-elif [ -z $TMUX ]; then
-  tmux attach -t hack
+# always in a Tmux session if using terminal
+if [ -z $TERM_PROGRAM ]; then; else
+  tmux has -t hack &> /dev/null
+  if [ $? != 0 ]; then
+    tmux new -s hack
+  elif [ -z $TMUX ]; then
+    tmux attach -t hack
+  fi
 fi
-
