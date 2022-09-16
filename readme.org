@@ -1,5 +1,5 @@
 #+title: My Zsh Configuration
 
 #+begin_src shell
-wget -O ~/.zshrc https://raw.githubusercontent.com/yaodong/zshrc/master/.zshrc
+wget -O ~/.zshrc https://raw.githubusercontent.com/yaodong/zsh-conf/master/.zshrc
 #+end_src
