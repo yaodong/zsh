@@ -88,7 +88,8 @@ fi
 # always in a Tmux session
 tmux has -t hack &> /dev/null
 if [ $? != 0 ]; then
-  cd ~/ && tmux -2 new-session -s hack -D -d
-else
-  tmux attach-session -t hack
+  tmux new -s hack
+elif [ -z $TMUX ]; then
+  tmux attach -t hack
 fi
+
