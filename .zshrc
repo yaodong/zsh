@@ -89,4 +89,6 @@ fi
 tmux has -t hack &> /dev/null
 if [ $? != 0 ]; then
   cd ~/ && tmux -2 new-session -s hack -D -d
+else
+  tmux attach-session -t hack
 fi
