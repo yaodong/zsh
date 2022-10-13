@@ -81,12 +81,12 @@ export PROMPT="%{$fg[green]%}╭─%D{[%X]}%{$reset_color%}%{$fg[yellow]%} %~ %{
 %{$fg[green]%}╰\$ %{$reset_color%}"
 
 # load local configurations
-if [ -f ~/.zsh_local ]; then
-  source ~/.zsh_local
+if [ -f ~/.zshrc_local ]; then
+  source ~/.zshrc_local
 fi
 
-# always in a Tmux session if using terminal
-if [ -z $TERM_PROGRAM ]; then; else
+# use Tmux only if current term program is Apple Terminal
+if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then
   tmux has -t hack &> /dev/null
   if [ $? != 0 ]; then
     tmux new -s hack
@@ -94,3 +94,4 @@ if [ -z $TERM_PROGRAM ]; then; else
     tmux attach -t hack
   fi
 fi
+
