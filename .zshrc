@@ -76,9 +76,8 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.utf-8
 export LANG=en_US.utf-8
 
-# custom prompt
-export PROMPT="%{$fg[green]%}╭─%D{[%X]}%{$reset_color%}%{$fg[yellow]%} %~ %{$reset_color%}${git_branch}
-%{$fg[green]%}╰\$ %{$reset_color%}"
+# enable starship prompt
+eval "$(starship init zsh)"
 
 # use Tmux only if current term program is Apple Terminal
 if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then
@@ -89,4 +88,3 @@ if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then
     tmux attach -t hack
   fi
 fi
-

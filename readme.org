@@ -3,8 +3,12 @@
 #+begin_src shell
 brew install z
 brew install fzf
+brew install starship
 #+end_src
 
+Install Nerd Front: https://www.nerdfonts.com/
+
 #+begin_src shell
-wget -O ~/.zshrc https://raw.githubusercontent.com/yaodong/zsh-conf/master/.zshrc
+git clone --depth 1 git@github.com:yaodong/zsh.git ~/.config/zsh
+ln -s "$HOME/.config/zsh/.zshrc" "$HOME/.zshrc"
 #+end_src
