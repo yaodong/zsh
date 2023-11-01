@@ -24,7 +24,7 @@ ZSH_THEME="strug"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -68,7 +68,7 @@ ZSH_THEME="strug"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux git emacs ruby python rbenv rails)
+plugins=(tmux git emacs ruby python rbenv pyenv rails docker yarn fzf z zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,11 +79,6 @@ export LANG=en_US.utf-8
 # custom prompt
 export PROMPT="%{$fg[green]%}╭─%D{[%X]}%{$reset_color%}%{$fg[yellow]%} %~ %{$reset_color%}${git_branch}
 %{$fg[green]%}╰\$ %{$reset_color%}"
-
-# load local configurations
-if [ -f ~/.zshrc_local ]; then
-  source ~/.zshrc_local
-fi
 
 # use Tmux only if current term program is Apple Terminal
 if [ "$TERM_PROGRAM" = 'Apple_Terminal' ]; then

@@ -1,5 +1,10 @@
 #+title: My Zsh Configuration
 
 #+begin_src shell
+brew install z
+brew install fzf
+#+end_src
+
+#+begin_src shell
 wget -O ~/.zshrc https://raw.githubusercontent.com/yaodong/zsh-conf/master/.zshrc
 #+end_src
