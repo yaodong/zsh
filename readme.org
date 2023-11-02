@@ -1,4 +1,9 @@
-#+title: My Zsh Configuration
+#+title: Zsh Configuration
+
+#+CAPTION: Screenshot
+[[./screenshot.png]]
+
+* Installation
 
 #+begin_src shell
 brew install z
